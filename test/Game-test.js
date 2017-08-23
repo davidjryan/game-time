@@ -8,7 +8,7 @@ describe('Game', function() {
   beforeEach(function(){
     game = new Game();
   });
-  
+
   it('should be a function', function() {
     assert.isFunction(Game);
   });
@@ -27,15 +27,16 @@ describe('Game', function() {
     assert.equal(game.difficulty, true);
   });
 
-  it('should have a speed with a defalut value of 1', function() {
-    assert.equal(game.speed, 1);
+  it('should have a speed with a defalut value of 15', function() {
+    assert.equal(game.speed, 15);
   });
 
-  it('should be able to take a number as an argument for speed', function() {
-    game = new Game(false, 3);
-
-    assert.equal(game.speed, 3);
-  });
+  it('should have a speed of 22 if difficulty is true', function() {
+    game = new Game(true);
+    assert.equal(game.difficulty, true);
+    game.difficultyState();
+    assert.equal(game.speed,22);
+  })
 
   it('should have a score with a default value of 0', function() {
     assert.equal(game.score, 0);
