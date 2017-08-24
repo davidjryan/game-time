@@ -2,22 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Game Time</title>
+  <title>Snake</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
   <body>
-    <section class="nokia-container">
-      <h1>nokia</h1>
-    </section>
-      <canvas id="canvas" width="900" height='900'></canvas>
-    <section class="button-container">
-      <button class="start-button">start</button>
-      <button class="easy-button">easy</button>
-      <button class="hard-button">hard</button>
-    </section>
-    <section class="scoreboard-container">
-      <p class="scoreboard-local">SCORE: 0</p>
-      <p class="scoreboard-high-score">HIGH SCORE: 0</p>
-    </section>
-    <script src="main.bundle.js"></script>
+    <main>
+      <section class="nokia-logo-container">
+        <img class="nokia-logo" src="lib/assets/img/logo-nokia.svg" alt="" />
+      </section>
+      <section class="canvas-container">
+        <canvas id="canvas" width="900" height='900'></canvas>
+      </section>
+      <section class="buttons-container">
+        <article class="select-difficulty-container">
+          <p class="select-difficulty-text uppercase">select difficulty</p>
+        </article>
+        <article class="game-over-text-container">
+          <p class="game-over-text uppercase">game over</p>
+        </article>
+        <article class="all-buttons">
+          <button class="start-button uppercase">start</button>
+          <button class="easy-button uppercase">easy</button>
+          <button class="hard-button uppercase">hard</button>
+        <article>
+      </section>
+      <section class="scoreboard-container">
+        <p class="scoreboard-local uppercase">   score: 0</p>
+        <p class="scoreboard-high-score uppercase">high score: 0</p>
+      </section>
+      <section class="sound-container">
+        <audio class="background-music" autoplay muted>
+          <source src="lib/assets/audio/anaconda-8bit.mp3" type="audio/mpeg">
+        </audio>
+        <button class="toggle-audio-button uppercase"><img class="audio-button-icon" alt="toggle mute sound icon" src="lib/assets/img/icon-pixel-mute.svg"></button>
+      </section>
+      <script src="main.bundle.js"></script>
+    </main>
   </body>
 </html>
